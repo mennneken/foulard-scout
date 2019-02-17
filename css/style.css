@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  background-image: url(../images/bg-texture-paper.png);
+  background-color: #e8e8e8;
+  font-size: calc((25 / 16) * 1em);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+header, section {
+  height: 100vh;
+}
+
+header {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.container {
+  width: calc((1144 / 1280) * 100%);
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yeseva One', cursive;
+  line-height: 1.333;
+}
+
+h1 {
+  margin-top: calc((70 / (4.2087269129 * 25)) * 1em); /* 70px */
+  margin-right: calc((118 / (4.2087269129 * 25)) * 1em);
+  font-size: 4.2087269129em; /* 105.218px */
+  width: calc((658 / 1144) * 100%);
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.776889em;
+  width: calc((368 / 950) * 100%);
+}
+
+h2::before, h2::after {
+  position: relative;
+  color: #09A8FA;
+  opacity: .3;
+}
+
+h2::before {
+  content: "«";
+  top: -.35em;
+  margin-right: .1em;
+}
+
+h2::after {
+  content: "»";
+  top: .25em;
+  margin-left: .1em;
+}
+
+em {
+  font-style: normal;
+  color: #09A8FA;
+}
+
+p {
+  width: calc((561 / 1144) * 100%);
+  line-height: 1.5996;
+  position: relative;
+}
+
+p::before {
+  content: url(../images/stripe.svg);
+  position: absolute;
+  left: calc((-20 / 561) * 100%);
+  top: .2em;
+}
+
+section:nth-child(odd) p, section:nth-child(odd) .illu   {
+  margin-left: calc((194 / 1144) * 100%);
+}
+
+section:nth-child(even) p {
+  margin-left: calc((388 / 1144) * 100%);
+}
+
+section:nth-child(even) h2 {
+  text-align: right;
+  margin-right: calc((20 / 950) * 100%);
+  width: calc((368 / 1144) * 100%);
+}
+section:nth-child(even) .illu {
+  justify-content: flex-start;
+}
+
+section:nth-child(odd) .illu {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+}
+
+
+section:nth-child(odd) .illu img {
+  margin-right: calc((20 / 950) * 100%);
+}
+
+.illu {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-top: calc((40 / 25) * 1em);
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: ease-out .2s;
+}
+
+a:hover, a:active {
+  color: #09A8FA;
+}
